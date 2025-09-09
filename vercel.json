@@ -17,11 +17,6 @@
       "dest": "/museum-web/$1"
     }
   ],
-  "functions": {
-    "museum-web/assets/videos/**": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/assets/videos/(.*)",
