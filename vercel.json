@@ -1,4 +1,5 @@
 {
+  "name": "museum-web-online-exhibition",
   "version": 2,
   "builds": [
     {
