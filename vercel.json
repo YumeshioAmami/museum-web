@@ -7,29 +7,14 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/museum-web/index.html"
+      "source": "/",
+      "destination": "/museum-web/index.html"
     },
     {
-      "src": "/((?!museum-web).*)",
-      "dest": "/museum-web/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/assets/videos/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "video/mp4"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000"
-        }
-      ]
+      "source": "/((?!museum-web).*)",
+      "destination": "/museum-web/$1"
     }
   ]
 }
