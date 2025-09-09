@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线上博物馆</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="app">
+        <!-- 主容器 -->
+        <div class="container">
+            <!-- 顶部导航 -->
+            <header class="header">
+                <h1 class="title">线上博物馆</h1>
+            </header>
+
+            <!-- 主要内容区域 -->
+            <main class="main-content">
+                <!-- 主页内容 -->
+                <div id="home-page" class="page active">
+                    <!-- 轮播图区域 -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" id="swiper-wrapper">
+                            <!-- 轮播图项目将通过JS动态生成 -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- 藏品展示区域 -->
+                    <div class="collections-section">
+                        <h2 class="section-title">明星藏品</h2>
+                        <div class="collections-grid" id="collections-grid">
+                            <!-- 藏品项目将通过JS动态生成 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 探索页内容 -->
+                <div id="explore-page" class="page">
+                    <!-- 视频播放区域 -->
+                    <div class="video-section">
+                        <video id="museum-video" controls>
+                            <source src="assets/videos/head/head.mp4" type="video/mp4">
+                            <div class="video-placeholder">
+                                <div class="placeholder-content">
+                                    <h3>🏛️ 博物馆宣传视频</h3>
+                                    <p>视频加载中...</p>
+                                    <p style="font-size: 12px; color: #666; margin-top: 10px;">如果视频无法播放，可能是由于文件大小限制。本地运行时视频正常显示。</p>
+                                </div>
+                            </div>
+                        </video>
+                    </div>
+
+                    <!-- AI问答区域 -->
+                    <div class="chat-section">
+                        <div class="chat-header">
+                            <h3 class="chat-title">🏛️ 博物馆AI导览助手</h3>
+                            <p class="chat-subtitle">专业文物知识问答 · 历史文化解读</p>
+                        </div>
+                        
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message assistant">
+                                <div class="message-content">
+                                    欢迎来到线上博物馆！我是您的专属AI导览助手，可以为您介绍文物历史、解答文化问题。请问您想了解什么呢？
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input">
+                            <input type="text" id="chat-input-field" placeholder="请问您想了解哪件文物或历史知识？" />
+                            <button id="send-btn" class="send-btn">发送</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- 底部导航 -->
+            <nav class="bottom-nav">
+                <div class="nav-item active" data-page="home">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">主页</span>
+                </div>
+                <div class="nav-item" data-page="explore">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-text">探索</span>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 藏品详情模态框 -->
+    <div id="collection-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- 详情内容将通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

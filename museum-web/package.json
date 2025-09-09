@@ -1,0 +1,25 @@
+{
+  "name": "museum-web",
+  "version": "1.0.0",
+  "description": "线上博物馆 - 一个展示文物藏品的静态网站",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "museum",
+    "artifacts",
+    "cultural",
+    "heritage",
+    "static-site"
+  ],
+  "author": "Museum Web Team",
+  "license": "MIT",
+  "homepage": ".",
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
+}
